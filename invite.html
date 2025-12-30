@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Lời mời tham gia cuộc họp</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f5f7fa;">
+  <!--[if mso]>
+  <style type="text/css">
+    body, table, td { font-family: Arial, sans-serif !important; }
+  </style>
+  <![endif]-->
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="background-color:#f5f7fa; margin:0; padding:20px 0;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#ffffff;">
+          <!-- Header -->
+          <tr>
+            <td align="center" bgcolor="#4c51bf" style="padding:24px 20px; color:#ffffff; font-family:Arial,sans-serif;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" style="font-size:32px; line-height:32px;">📅</td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-top:8px; font-size:22px; line-height:26px; font-weight:bold;">
+                    Lời mời tham gia cuộc họp
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Nội dung -->
+          <tr>
+            <td align="left" style="padding:24px 24px 8px 24px; font-family:Arial,sans-serif; font-size:15px; line-height:22px; color:#1a202c;">
+              Xin chào <strong style="color:#4c51bf;">{{userName}}</strong>,
+            </td>
+          </tr>
+
+          <tr>
+            <td align="left" style="padding:4px 24px 16px 24px; font-family:Arial,sans-serif; font-size:14px; line-height:22px; color:#4a5568;">
+              <strong>{{bookerName}}</strong> đã mời bạn tham gia cuộc họp sau:
+            </td>
+          </tr>
+
+          <!-- Thông tin cuộc họp -->
+          <tr>
+            <td align="center" style="padding:0 24px 16px 24px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f7fafc; border:1px solid #e2e8f0;">
+                <tr>
+                  <td style="padding:16px 16px 8px 16px; font-family:Arial,sans-serif; font-size:18px; line-height:24px; color:#1a202c; font-weight:bold; border-bottom:1px solid #e2e8f0;">
+                    {{title}}
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:10px 16px 4px 16px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="26" valign="top" style="font-size:18px; line-height:22px; color:#4c51bf;">📍</td>
+                        <td valign="top">
+                          <div style="font-family:Arial,sans-serif; font-size:11px; line-height:14px; text-transform:uppercase; letter-spacing:0.5px; color:#718096; font-weight:bold;">
+                            Phòng họp
+                          </div>
+                          <div style="font-family:Arial,sans-serif; font-size:14px; line-height:20px; color:#1a202c; font-weight:500;">
+                            {{roomName}}
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:4px 16px 10px 16px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="26" valign="top" style="font-size:18px; line-height:22px; color:#4c51bf;">🕐</td>
+                        <td valign="top">
+                          <div style="font-family:Arial,sans-serif; font-size:11px; line-height:14px; text-transform:uppercase; letter-spacing:0.5px; color:#718096; font-weight:bold;">
+                            Thời gian
+                          </div>
+                          <div style="font-family:Arial,sans-serif; font-size:14px; line-height:20px; color:#1a202c; font-weight:500;">
+                            {{startTime}} - {{endTime}}
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                {{#if description}}
+                <tr>
+                  <td style="padding:0 16px 16px 16px;">
+                    <table width="100%" cellpadding="10" cellspacing="0" border="0" style="background-color:#ffffff; border:1px solid #e2e8f0;">
+                      <tr>
+                        <td style="font-family:Arial,sans-serif; font-size:14px; line-height:20px; color:#4a5568;">
+                          <strong>Mô tả:</strong> {{description}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                {{/if}}
+              </table>
+            </td>
+          </tr>
+
+          <!-- Hành động -->
+          <tr>
+            <td align="center" style="padding:0 24px 16px 24px;">
+              <table width="100%" cellpadding="16" cellspacing="0" border="0" style="background-color:#edf2ff; border:1px solid #c3dafe;">
+                <tr>
+                  <td align="center" style="font-family:Arial,sans-serif; font-size:15px; line-height:22px; color:#1a202c; font-weight:bold; padding-bottom:8px;">
+                    Vui lòng phản hồi lời mời
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td align="center" style="padding:0 8px 8px 8px;">
+                          <a href="{{acceptUrl}}"
+                             style="display:inline-block; padding:10px 24px; background-color:#10b981; color:#ffffff; text-decoration:none; font-family:Arial,sans-serif; font-size:14px; font-weight:bold;">
+                            ✓ Chấp nhận
+                          </a>
+                        </td>
+                        <td align="center" style="padding:0 8px 8px 8px;">
+                          <a href="{{declineUrl}}"
+                             style="display:inline-block; padding:10px 24px; background-color:#ef4444; color:#ffffff; text-decoration:none; font-family:Arial,sans-serif; font-size:14px; font-weight:bold;">
+                            ✗ Từ chối
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Ghi chú file .ics -->
+          <tr>
+            <td align="center" style="padding:0 24px 24px 24px;">
+              <table width="100%" cellpadding="12" cellspacing="0" border="0" style="background-color:#fff7ed; border-left:4px solid #f59e0b;">
+                <tr>
+                  <td style="font-family:Arial,sans-serif; font-size:13px; line-height:20px; color:#92400e;">
+                    💡 <strong>Lưu ý:</strong> File lịch (.ics) đã được đính kèm. Vui lòng mở file để thêm cuộc họp vào lịch của bạn.
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" bgcolor="#1a202c" style="padding:20px 24px; font-family:Arial,sans-serif; font-size:12px; line-height:18px; color:#a0aec0;">
+              <strong>Meeting Room Booking System</strong><br />
+              Hệ thống quản lý đặt phòng họp<br />
+              <span style="display:block; margin-top:10px; font-size:11px;">
+                Email này được gửi tự động, vui lòng không trả lời.
+              </span>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

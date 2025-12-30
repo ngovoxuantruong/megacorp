@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Nhắc nhở cuộc họp</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f7fafc;">
+  <!--[if mso]>
+  <style type="text/css">
+    body, table, td { font-family: Arial, sans-serif !important; }
+  </style>
+  <![endif]-->
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="background-color:#f7fafc; margin:0; padding:20px 0;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#ffffff;">
+          <!-- Header -->
+          <tr>
+            <td align="center" bgcolor="#3182ce" style="padding:24px 20px; color:#ffffff; font-family:Arial,sans-serif;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" style="font-size:22px; line-height:26px; font-weight:bold;">
+                    ⏰ Nhắc nhở cuộc họp
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Nội dung -->
+          <tr>
+            <td align="left" style="padding:24px 24px 8px 24px; font-family:Arial,sans-serif; font-size:15px; line-height:22px; color:#2d3748;">
+              Xin chào <strong style="color:#2a4365;">{{userName}}</strong>,
+            </td>
+          </tr>
+
+          <tr>
+            <td align="left" style="padding:4px 24px 16px 24px; font-family:Arial,sans-serif; font-size:14px; line-height:22px; color:#4a5568;">
+              Cuộc họp của bạn sẽ diễn ra <strong>sau {{hoursBefore}} giờ</strong>. Thông tin chi tiết:
+            </td>
+          </tr>
+
+          <!-- Thông tin cuộc họp -->
+          <tr>
+            <td align="center" style="padding:0 24px 16px 24px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f0f4f8; border:1px solid #e2e8f0;">
+                <tr>
+                  <td style="padding:16px 16px 8px 16px; font-family:Arial,sans-serif; font-size:16px; line-height:22px; color:#1a202c; font-weight:bold;">
+                    {{title}}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:4px 16px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="26" valign="top" style="font-size:18px; line-height:22px; color:#4299e1;">📍</td>
+                        <td valign="top">
+                          <span style="font-family:Arial,sans-serif; font-size:14px; line-height:20px; color:#4a5568;">
+                            <strong>Phòng họp:</strong> {{roomName}}
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:4px 16px 12px 16px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="26" valign="top" style="font-size:18px; line-height:22px; color:#4299e1;">⏰</td>
+                        <td valign="top">
+                          <span style="font-family:Arial,sans-serif; font-size:14px; line-height:20px; color:#4a5568;">
+                            <strong>Thời gian:</strong> {{startTime}} - {{endTime}}
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                {{#if description}}
+                <tr>
+                  <td style="padding:0 16px 16px 16px;">
+                    <table width="100%" cellpadding="10" cellspacing="0" border="0" style="background-color:#ffffff; border:1px solid #e2e8f0;">
+                      <tr>
+                        <td style="font-family:Arial,sans-serif; font-size:14px; line-height:20px; color:#4a5568;">
+                          <strong>Mô tả:</strong> {{description}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                {{/if}}
+              </table>
+            </td>
+          </tr>
+
+          <!-- Lưu ý -->
+          <tr>
+            <td align="center" style="padding:0 24px 24px 24px;">
+              <table width="100%" cellpadding="12" cellspacing="0" border="0" style="background-color:#fffbeb; border-left:4px solid #f6ad55;">
+                <tr>
+                  <td style="font-family:Arial,sans-serif; font-size:14px; line-height:20px; color:#9c4221;">
+                    <strong>💡 Lưu ý:</strong><br />
+                    {{#if (eq hoursBefore 1)}}
+                      Cuộc họp sẽ bắt đầu sau <strong>1 giờ</strong>. Vui lòng chuẩn bị và có mặt đúng giờ.
+                    {{else}}
+                      Cuộc họp sẽ bắt đầu sau <strong>24 giờ</strong>. Vui lòng sắp xếp thời gian phù hợp.
+                    {{/if}}<br />
+                    Bạn có thể xem và quản lý đặt phòng tại
+                    <a href="{{frontendUrl}}/bookings" style="color:#c05621; text-decoration:underline;">Phòng họp của tôi</a>.
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding:0 24px 20px 24px; border-top:1px solid #edf2f7; font-family:Arial,sans-serif; font-size:12px; line-height:18px; color:#a0aec0;">
+              Meeting Room Booking System |
+              <a href="{{frontendUrl}}" style="color:#4299e1; text-decoration:none;">Truy cập hệ thống</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhắc nhở cuộc họp</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #2d3748;
+      background-color: #f7fafc;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .content {
+      padding: 30px;
+    }
+    .greeting {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .greeting strong {
+      color: #2a4365;
+    }
+    .info-card {
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      border: 1px solid #e2e8f0;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 15px;
+      color: #4a5568;
+    }
+    .info-item:last-child {
+      margin-bottom: 0;
+    }
+    .info-item strong {
+      color: #2d3748;
+      min-width: 120px;
+    }
+    .icon {
+      margin-right: 10px;
+      color: #4299e1;
+      font-size: 18px;
+    }
+    .reminder-box {
+      background-color: #fffbeb;
+      border-left: 4px solid #f6ad55;
+      padding: 20px;
+      margin-top: 25px;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #9c4221;
+    }
+    .reminder-box strong {
+      color: #c05621;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #a0aec0;
+      font-size: 12px;
+      border-top: 1px solid #edf2f7;
+      margin-top: 20px;
+    }
+    @media (max-width: 480px) {
+      .container {
+        margin: 10px;
+        border-radius: 8px;
+      }
+      .header h1 {
+        font-size: 24px;
+      }
+      .content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>⏰ Nhắc nhở cuộc họp</h1>
+    </div>
+    <div class="content">
+      <p class="greeting">Xin chào <strong>{{userName}}</strong>,</p>
+      <p>Cuộc họp của bạn sẽ diễn ra <strong>sau {{hoursBefore}} giờ</strong>. Dưới đây là thông tin chi tiết:</p>
+
+      <div class="info-card">
+        <div class="info-item">
+          <span class="icon">📝</span> <strong>Tiêu đề cuộc họp:</strong> {{title}}
+        </div>
+        <div class="info-item">
+          <span class="icon">📍</span> <strong>Phòng họp:</strong> {{roomName}}
+        </div>
+        <div class="info-item">
+          <span class="icon">⏰</span> <strong>Thời gian:</strong> {{startTime}} - {{endTime}}
+        </div>
+        {{#if description}}
+        <div class="info-item">
+          <span class="icon">📄</span> <strong>Mô tả:</strong> {{description}}
+        </div>
+        {{/if}}
+      </div>
+
+      <div class="reminder-box">
+        <p><strong>💡 Lưu ý:</strong></p>
+        {{#if (eq hoursBefore 1)}}
+        <p>Cuộc họp sẽ bắt đầu sau <strong>1 giờ</strong>. Vui lòng chuẩn bị và có mặt đúng giờ.</p>
+        {{else}}
+        <p>Cuộc họp sẽ bắt đầu sau <strong>24 giờ</strong>. Vui lòng sắp xếp thời gian phù hợp.</p>
+        {{/if}}
+        <p>Bạn có thể xem chi tiết và quản lý đặt phòng tại <a href="{{frontendUrl}}/bookings" style="color: #c05621; text-decoration: underline;">Phòng họp của tôi</a>.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Meeting Room Booking System | <a href="{{frontendUrl}}" style="color: #4299e1; text-decoration: none;">Truy cập hệ thống</a></p>
+    </div>
+  </div>
+</body>
+</html>
+
